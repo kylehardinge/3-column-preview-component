@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+body,
+html {
+    margin: 0;
+    padding: 0;
+    background-color: hsl(0, 0%, 95%);
+}
+
+h2 {
+    font-family: "Big Shoulders Display", cursive;
+    text-transform: uppercase;
+    font-size: 2.5em;
+}
+
+.container p {
+    font-family: 'Lexend Deca', sans-serif;
+    color: hsla(0, 0%, 100%, 0.75);
+    font-size: 0.9em;
+    line-height: 1.5em;
+}
+
+.container {
+    height: 95vh;
+    display: grid;
+    place-items: center;
+    background-color: hsl(0, 0%, 95%);
+}
+.cards {
+    width: min(65%, 75rem);
+    display: grid;
+    grid-auto-flow: column;
+    border-radius: 0.4em;
+    overflow: hidden;
+    position: relative;
+    color: white;
+}
+
+@media (max-width: 1110px) {
+    .cards {
+        grid-auto-flow: row;
+        max-width: 420px;
+    }
+    .product {
+        height: auto;
+    }
+    .container {
+        height: auto;
+        margin: 5vh 0;
+    }
+}
+
+@media (max-width: 450px) {
+    .cards {
+        width: 90%;
+    }
+}
+
+.product {
+    background-color: hsl(184, 100%, 22%);
+    background-image: url(./images/icon-suvs.svg);
+    background-repeat: no-repeat;
+    background-position: 3em 3em;
+    height: calc(475px - 12em);
+    margin: 0;
+    padding: 6em 3em;
+    position: relative;
+}
+
+.product:first-of-type {
+    background-color: hsl(31, 77%, 52%);
+    background-image: url(./images/icon-sedans.svg);
+}
+.product:last-of-type {
+    background-color: hsl(179, 100%, 13%);
+    background-image: url(./images/icon-luxury.svg);
+}
+
+.button {
+    text-decoration: none;
+    background-color: white;
+    padding: 0.75rem 2rem;
+    display: inline-block;
+    width: auto;
+    margin-top: auto;
+    border-style: solid;
+    border-width: 2px;
+    border-color: hsl(0, 0%, 95%);
+    position: absolute;
+    bottom: 2.25em;
+    border-radius: 15rem;
+
+}
+
+.product:first-of-type .button {
+    color: hsl(31, 77%, 52%);
+}
+
+.product:first-of-type .button:active {
+    background-color: hsl(31, 77%, 52%);
+    color: hsl(0, 0%, 95%);
+}
+
+.product:last-of-type .button {
+    color: hsl(179, 100%, 13%);
+}
+
+.product:last-of-type .button:active {
+    background-color: hsl(179, 100%, 13%);
+    color: hsl(0, 0%, 95%);
+}
+
+
+.product .button {
+    color: hsl(184, 100%, 22%);
+    background-color: hsl(0, 0%, 95%);
+}
+
+.product .button:active {
+    background-color: hsl(184, 100%, 22%);
+    color: hsl(0, 0%, 95%);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
